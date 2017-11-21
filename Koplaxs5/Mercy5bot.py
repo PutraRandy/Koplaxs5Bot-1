@@ -69,15 +69,15 @@ KAC=[cl,ki,kk,kc,ks]
 #DEF8=[cl,ki,kk,kc,ks,ka,kb,ke,ku] Udah Ga Kepake(Boleh di apus)
 #DEF9=[cl,ki,kk,kc,ks,ka,kb,ko,ku] Udah Ga Kepake(Boleh di apus)
 #DEF10=[cl,ki,kk,kc,ks,ka,kb,ko,ke] Udah Ga Kepake(Boleh di apus)
-mid = cl.getProfile().mid #Luffy
-Amid = ki.getProfile().mid #Zorro
-Bmid = kk.getProfile().mid #Sanji
-Cmid = kc.getProfile().mid #Ussop
-Dmid = ks.getProfile().mid #Chooper
+mid = cl.getProfile().mid ["u775173c903cf92984be4455642a78a29"]
+Amid = ki.getProfile().mid["u1a14951d93b38f703531edf0b1a7f65d"]
+Bmid = kk.getProfile().mid["u1b6482c4b9d7404a836243719c23e0e9"]
+Cmid = kc.getProfile().mid["u55906eae1d1f364347734f8969ac7bac"]
+Dmid = ks.getProfile().mid["u8e7e22e471a9d3b68b7992246e6bf9ab"]
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
-admin=["ued156c86ffa56024c0acba16f7889e6d"] 
-owner=["ued156c86ffa56024c0acba16f7889e6d"]
+admin=["u775173c903cf92984be4455642a78a29"]
+owner=["u775173c903cf92984be4455642a78a29"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -85,26 +85,8 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Teman
-≫ Aku Ga Jawab PM Karna aq Cuma Bot Protect ≪
-≫ ONE PIECE BOT PROTECT ≪
+    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Tema
 
-Ready:
-
-≫ bot protect ≪
-≫ SelfBot ≪
-
-
-ṡȗƿƿȏяṭєԀ ɞʏ:
-  
-☆ ONE PIECE BOT PROTECT ☆
-☆ SMULE VOICE FAMILY ☆
-☆ FOUNDER COMMUNITY ☆
-☆ Generasi Kickers Killers ☆
-
-
-Minat? Silahkan PM!
-Idline: http://line.me/ti/p/~hanavy1992""",
     "lang":"JP",
     "comment":"Thanks for add me",
     "commentOn":False,
@@ -112,11 +94,11 @@ Idline: http://line.me/ti/p/~hanavy1992""",
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"Ｏｎｅ Ｐｉｅｃｅ Ｔｅａｍ ",
-    "cName2":"Ｏｎｅ Ｐｉｅｃｅ Ｔｅａｍ ",
-    "cName3":"Ｏｎｅ Ｐｉｅｃｅ Ｔｅａｍ ",
-    "cName4":"Ｏｎｅ Ｐｉｅｃｅ Ｔｅａｍ ",
-    "cName5":"Ｏｎｅ Ｐｉｅｃｅ Ｔｅａｍ ",
+    "cName":"Mercy
+    "cName2":"Bot1
+    "cName3":"Bot2
+    "cName4":"Bot3
+    "cName5":"Boy4
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -299,7 +281,7 @@ def bot(op):
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
 
 
@@ -309,7 +291,7 @@ def bot(op):
             if msg.contentType == 16:
                 url = msg.contentMetadata("line://home/post?userMid="+mid+"&postId="+"new_post")
                 cl.like(url[25:58], url[66:], likeType=1001)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
                if wait["wblack"] == True:
@@ -1246,7 +1228,7 @@ def bot(op):
                 if wait["autoAdd"] == True: md+="[•]Auto Add [On]\n"
                 else:md+="[•]Auto Add [Off]\n"
                 if wait["commentOn"] == True: md+="[•]Comment [On]\n"
-                else:md+="[•]Comment [Off]\n*============*\n⭐One Piece Bot⭐\n*============*"
+                else:md+="[•]Comment [Off]\n*============*\n⭐🍃􏿿􏿿[􏿿ғṃ]φµεεɳ ɱε૨૮ყ🍒  ⭐\n*============*"
                 cl.sendText(msg.to,md)
             elif "album merit " in msg.text:
                 gid = msg.text.replace("album merit ","")
@@ -1565,7 +1547,7 @@ def bot(op):
 
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["Kuy","One piece","Join kuy"]: #Panggil Semua Bot
+            elif msg.text in ["Join","Masuk"]: #Panggil Semua Bot
               if msg.from_ in owner:
                 G = cl.getGroup(msg.to)
                 ginfo = cl.getGroup(msg.to)
@@ -1587,7 +1569,7 @@ def bot(op):
                 cl.updateGroup(G)
                 print "Semua Sudah Lengkap"
                         
-            elif msg.text in ["Kampret join"]:
+            elif msg.text in ["Mercy join"]:
               if msg.form_ in admin:
                   x = ki.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1641,7 +1623,7 @@ def bot(op):
     #----------------------Fungsi Join Group Finish---------------#
 
     #-------------Fungsi Leave Group Start---------------#
-            elif msg.text in ["Bye op","Kabur all","Kaboor all"]: #Bot Ninggalin Group termasuk Bot Induk
+            elif msg.text in ["Pulang kuy","Balik kuy"]: #Bot Ninggalin Group termasuk Bot Induk
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1654,7 +1636,7 @@ def bot(op):
                     except:
                         pass
             
-            elif msg.text in ["Kaboor"]: #Semua Bot Ninggalin Group Kecuali Bot Induk
+            elif msg.text in ["Pulang"]: #Semua Bot Ninggalin Group Kecuali Bot Induk
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1715,7 +1697,7 @@ def bot(op):
     #-------------Fungsi Leave Group Finish---------------#
     
     #-------------Fungsi Tag All Start---------------#
-            elif msg.text in ["Tag all","Tagall"]:
+            elif msg.text in ["Cipok","Tagall"]:
             	 if msg.from_ in admin:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
@@ -2009,7 +1991,7 @@ def bot(op):
                   cl.sendText(msg.to,h)
       #--------------List Group------------
        #------------ Keluar Dari Semua Group------
-            elif msg.text in ["Bot out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
+            elif msg.text in ["Mercy out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
               if msg.from_ in owner:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
@@ -2064,11 +2046,11 @@ def bot(op):
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Absen","Absen bot","Absen dulu","Respon"]:
               if msg.from_ in admin:
-                cl.sendText(msg.to,"Tukang Sayur On")
-                ki.sendText(msg.to,"Tukang Colli On")
-                kk.sendText(msg.to,"Tukang Boker On")
-                kc.sendText(msg.to,"Tukang Becak On")
-                ks.sendText(msg.to,"Tukang Boong")
+                cl.sendText(msg.to,"Mercy Cantik hadir")
+                ki.sendText(msg.to,"Mercy Keceh Hadir")
+                kk.sendText(msg.to,"Mercy Manis Hadir")
+                kc.sendText(msg.to,"Mercy Bohay Hadir")
+                ks.sendText(msg.to,"Mercy Si Manja Hadir")
                 cl.sendText(msg.to,"Semua Udah Hadir Boss\nSiap Protect Group\nAman Gak Aman Yang Penting Anu")
       #-------------Fungsi Respon Finish---------------------#
                             
@@ -2083,9 +2065,13 @@ def bot(op):
             elif msg.text in ["Speed","Sp"]:
               if msg.from_ in admin:
                 start = time.time()
-                cl.sendText(msg.to, "Sabar Plak...")
+                cl.sendText(msg.to, "Sabar Sayang...")
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sDetik" % (elapsed_time))
+                cl.sendText(msg.to, "%ssecond" % (elapsed_time))
+                ki.sendText(msg.to, "%ssecond" % (elapsed_time)) 	    						    
+                kk.sendText(msg.to, "%ssecond" % (elapsed_time))	
+                kc.sendText(msg.to, "%ssecond" % (elapsed_time))
+                ks.sendText(msg.to, "%ssecond" % (elapsed_time))
       #-------------Fungsi Speedbot Finish---------------------#
 
       #-------------Fungsi Banned Send Contact Start------------------#
@@ -2106,15 +2092,15 @@ def bot(op):
       #-------------Fungsi Banned Send Contact Finish------------------#
             elif msg.text in ["Creator"]:
               msg.contentType = 13
-              msg.contentMetadata = {'mid': 'ued156c86ffa56024c0acba16f7889e6d'}
-              cl.sendText(msg.to,"======================")
+              msg.contentMetadata = {'mid': 'u775173c903cf92984be4455642a78a29'}
+              cl.sendText(msg.to,"=========SAYANG========")
               cl.sendMessage(msg)
-              cl.sendText(msg.to,"======================")
-              cl.sendText(msg.to,"Itu Creator Kami Yang Pea 😜")
+              cl.sendText(msg.to,"=========SAYANG========")
+              cl.sendText(msg.to,"Itu Creator Kami Yang Cantik & Manis 😜")
                 
       #-------------Fungsi Chat ----------------
             elif msg.text in ["Woy","woy","Woi","woi","bot","Bot"]:
-                 quote = ['Istri yang baik itu Istri yang Mengizinkan Suaminya untuk Poligami 😂😂😂.','Kunci Untuk Bikin Suami Bahagia itu cuma satu..\nIzinkan Suamimu Untuk Selingkuh Coyyy ','Ah Kupret Lu','Muka Lu Kaya Jamban','Ada Orang kah disini?','Sange Euy','Ada Perawan Nganggur ga Coy?']
+                 quote = ['Suami yang baik itu Istri yang Mengizinkan Istrinya untuk Selingkuh 😂😂😂.','Kunci Untuk Bikin Istri Bahagia itu cuma satu..\nIzinkan Istrimu Untuk Selingkuh Coyyy ','Ah Kupret Lu','Muka Lu Kaya Jamban','Ada Orang kah disini?','Sange Euy','Ada Perawan Nganggur ga Coy?']
                  psn = random.choice(quote)
                  cl.sendText(msg.to,psn)
             
@@ -2235,7 +2221,7 @@ def bot(op):
         if op.type == 15:
           if op.param2 in Bots:
              return
-          random.choice(KAC).sendText(op.param1, "Baper Tuh Orang :v ")
+          random.choice(KAC).sendText(op.param1, "KENAPA TUH DIA LEFT :v ")
           print "MEMBER HAS LEFT THE GROUP"
 #------------------------
         if op.type == 59:
@@ -2254,12 +2240,12 @@ def a2():
     else:
         return True
 def autolike():
-    for zx in range(0,500):
-      hasil = cl.activity(limit=500)
+    for zx in range(0,100):
+      hasil = cl.activity(limit=100)
       if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
         try:
           cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉Auto Like by ⭐⭐Koplaxs⭐⭐👈\n\n™SMULE VOICE FAMILY™")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉Auto Like by ⭐⭐MERCYBOT⭐⭐👈\n\n™MLC™")
           ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
@@ -2268,7 +2254,7 @@ def autolike():
           kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @hanavy1992\nLagu Promo Lho Kak\n===[★]One Piece Bot Protect[★]===")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @Mercy446\n\n===[★]M L C[★]===")
           print "Like"
         except:
           pass
@@ -2290,8 +2276,8 @@ def likePost():
                     kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by ^One Piece Bot^\nStatus Boss udah Kami Like\nOwner Kami :\nHanavy Koplaxs")
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @hanavy1992\nLagu Promo Lho Kak\n===[★]One Piece Bot Protect[★]===")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by ^M L C^\nStatus Boss udah Kami Like\nOwner Kami :\nMercy Queen")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @Mercy56\n\n===[★]M L C[★]===")
                     print "Like"
                 except:
                     pass
