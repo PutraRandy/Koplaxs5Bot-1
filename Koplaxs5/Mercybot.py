@@ -5,32 +5,29 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
-cl = LINETCR.LINE() #Luffy
-cl.login(qr=True)
+cl = LINETCR.LINE()
+cl.login(token="EnlNe5Ey3BIkAyGHTFyb.JN4I5hgP07AlEziKBMV5QW.pDZ8egobSapQ9FQ7FQTQ8ra0pK088dcuxMQabUCKe3g=")
 cl.loginResult()
 
-ki = LINETCR.LINE() #Zorro
-ki.login(qr=True)
-ki.loginResult()
+ki = LINETCR.LINE()
+ki.login(token="EnK6rhnGL31q7EKOhzk9.D1fZYqppKPHl5evwqQEkkq.M8MSlUwuA80fk8dsVcvWxAigAfV7gDdgKXo4wZiWXZI=")
 
-kk = LINETCR.LINE() #Sanji
-kk.login(qr=True)
-kk.loginResult()
+kk = LINETCR.LINE()
+kk.login(token="EnPE7oQbOndqJT461tWd.gHsvhzoZJ3a1mE3WSAF2xq.3SVShkx6LA0s7Fq7doaUhz+2ekjjqvcg+Y8jeE/t/pE=")
 
-kc = LINETCR.LINE() #Ussop
-kc.login(qr=True)
-kc.loginResult()
+kc = LINETCR.LINE()
+kc.login(token="EnbPhC5fMdKCso9fKSs9.g2scXlNxqeQdyKnXNcpG6q.EJhC/AUVTjuc8nEylzA6bwsNfyfpnAH1m1xRX4kSJMY=")
 
-ks = LINETCR.LINE() #Chooper
-ks.login(qr=True)
-ks.loginResult()
-
-print "login success plak"
+ks = LINETCR.LINE() 
+ks.login(token="En1zLO2ZpxiUOchys4lc.vzbURH0FnKnhC0/jAAX7Ra.0c4qPbs3VpdFmgPC7r/e+kENjk2Y3thTFnRT/s4TqT8=") 
+	 
+cl
+print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""O҉n҉e҉ ҉P҉i҉e҉c҉e҉ ҉T҉e҉a҉m҉ ҉P҉r҉o҉t҉e҉c҉t҉
-Owner : ✰ЌờᎮḼΛẌֆ✰
+helpMessage ="""MERCY ҉P҉i҉e҉c҉e҉ ҉T҉e҉a҉m҉ ҉P҉r҉o҉t҉e҉c҉t҉
+Owner : ✰MERCY BOT✰
 -==================-
 ◄]·♦·Menu For Public·♦·[►
 [•]Adminlist
