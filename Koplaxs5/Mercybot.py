@@ -82,7 +82,7 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Tema
+    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Teman Saya
 
     "lang":"JP",
     "comment":"Thanks for add me",
@@ -1692,7 +1692,6 @@ def bot(op):
                     except:
                         pass
     #-------------Fungsi Leave Group Finish---------------#
-    
     #-------------Fungsi Tag All Start---------------#
             elif msg.text in ["Cipok","Tagall"]:
             	 if msg.from_ in admin:
